@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^5.0.8",
+    "@joint/core": "^4.0.1",
+    "@mui/icons-material": "^5.15.7",
     "@mui/material": "^5.15.6",
     "@mui/styled-engine-sc": "^6.0.0-alpha.14",
-    "jointjs": "^3.7.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.8"
