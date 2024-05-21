@@ -7,3 +7,13 @@ body {
 #root {
   height: 100vh;
 }
+
+/** Box sizing fix **/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
