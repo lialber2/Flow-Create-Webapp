@@ -1,4 +1,5 @@
 import { shapes, util } from '@joint/core'
+import { colorScheme } from '../theme'
 
 // Append a foreignObject to the default Rectangle SVG containing an input.
 // Input should allow the text of the node to become editable when the element is double clicked.
@@ -31,23 +32,27 @@ export class Rectangle extends shapes.standard.Rectangle {
     super({
       size: { width: 150, height: 65 },
       attrs: {
-        body: { fill: 'rgb(191, 177, 223)', rx: 5, ry: 5 },
-        foreignObject: {
-          x: 0,
-          y: 0,
-          width: 'calc(w)',
-          height: 'calc(h)',
-          visibility: 'hidden',
-        },
-        inputWrapper: {
-          style: {
-            display: 'flex',
-            'justify-content': 'Center',
-            'align-items': 'Center',
-            height: '100%',
+        body: { fill: colorScheme.main, rx: 5, ry: 5 },
+        label: {
+          stroke: colorScheme.contrastText,
+          fill: colorScheme.contrastText,
+          foreignObject: {
+            x: 0,
+            y: 0,
+            width: 'calc(w)',
+            height: 'calc(h)',
+            visibility: 'hidden',
           },
+          inputWrapper: {
+            style: {
+              display: 'flex',
+              'justify-content': 'Center',
+              'align-items': 'Center',
+              height: '100%',
+            },
+          },
+          ...attrs?.label,
         },
-        ...attrs,
       },
       ...rest,
     })
