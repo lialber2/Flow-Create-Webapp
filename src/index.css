@@ -1,4 +1,4 @@
-body {
+/** body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
@@ -8,12 +8,24 @@ body {
   height: 100vh;
 }
 
-/** Box sizing fix **/
+/** Box sizing fix
 html {
   box-sizing: border-box;
+  font-family: Roboto, Helvetica, sans-serif;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
+} **/
+
+/**
+Color Pallete
+
+Paynes Grey - #495867
+Glaucous - #577399
+Columbia Blue - #BDD5EA
+Ghost White - #F7F7FF
+Dark Moss Green - #47682C
+Vanilla - #FAF2A1
+**/

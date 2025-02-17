@@ -29,23 +29,10 @@ export class Link extends shapes.standard.Link {
    * @param args.target - The target (end) node of the edge.
    */
   constructor({ labelText, source, target }: LinkArguments) {
-    super({
-      attrs: {
-        line: {
-          stroke: 'gray',
-          strokeWidth: 2,
-          targetMarker: {
-            type: 'image',
-            'xlink:href': 'arrow_left_black_24dp.svg',
-            width: 50,
-            height: 50,
-            y: -25,
-            x: -22,
-          },
-        },
-      },
-    })
+    super()
     this.appendLabel({ attrs: { text: { text: labelText } } })
+    this.router('orthogonal')
+    this.connector('straight', { cornerType: 'line' })
     this.source(source)
     this.target(target)
   }
